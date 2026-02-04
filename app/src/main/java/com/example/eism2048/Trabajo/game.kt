@@ -13,9 +13,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -123,10 +126,9 @@ fun Main() {
                 modifier = Modifier.fillMaxSize().padding(12.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Row() { Text("2") }
-                Row() { Text("2") }
-                Row() { Text("2") }
-                Row() { Text("2") }
+                Text("2", fontSize = 40.sp,color=colorN)
+                HorizontalDivider(modifier=Modifier,4.dp, color = Color(0xFF766654))
+
             }
 
 
@@ -136,24 +138,66 @@ fun Main() {
             Box(
                 modifier = Modifier.padding(5.dp).background(Color(0xFFE1DDCD))
             ) {
-                Box(//left button
-                    modifier = Modifier.padding(5.dp).background(Color(0xFFB9AB99))
-                ) {
-                    Icon(
-                        imageVector = Icons.Filled.KeyboardArrowLeft,
-                        contentDescription = null,
-                        tint = Color(0xFFFDFCFC),
-                        modifier = Modifier.size(30.dp).align(Alignment.TopCenter)
-                    )
-                    Text(
-                        "_ _",
-                        modifier = Modifier.align(Alignment.Center),
-                        textAlign = TextAlign.Center,
-                        fontSize = 40.sp,
-                        color = Color(                            0xFFA59888                        )
-                    )
+                Row() {
+                    Box(//left button
+                        modifier = Modifier.padding(5.dp).background(Color(0xFFB9AB99))
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.KeyboardArrowLeft,
+                            contentDescription = null,
+                            tint = Color(0xFFFDFCFC),
+                            modifier = Modifier.size(30.dp).align(Alignment.TopCenter)
+                        )
+                        Text(
+                            "_ _",
+                            modifier = Modifier.align(Alignment.Center),
+                            textAlign = TextAlign.Center,
+                            fontSize = 40.sp,
+                            color = Color(0xFFA59888)
+                        )
+                    }
+                    Box(//mid button
+                        modifier = Modifier.padding(5.dp).background(Color(0xFFB9AB99))
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.AccountBox,
+                            contentDescription = null,
+                            tint = Color(0xFFFDFCFC),
+                            modifier = Modifier.size(30.dp).align(Alignment.TopCenter)
+                        )
+                        Text(
+                            "_   ",
+                            modifier = Modifier.align(Alignment.Center),
+                            //textAlign = TextAlign.Center,
+                            fontSize = 40.sp,
+                            color = Color(0xFFA59888)
+                        )
+                        Text(
+                            "  _",
+                            modifier = Modifier.align(Alignment.Center),
+                            //textAlign = TextAlign.Center,
+                            fontSize = 40.sp,
+                            color = Color(0xFFE1DDCD)
+                        )
+                    }
+                    Box(//left button
+                        modifier = Modifier.padding(5.dp).background(Color(0xFFB9AB99))
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.List,
+                            contentDescription = null,
+                            tint = Color(0xFFE1DDCD),
+                            modifier = Modifier.size(30.dp).align(Alignment.TopCenter)
+                        )
+                        Text(
+                            "_ _",
+                            modifier = Modifier.align(Alignment.Center),
+                            textAlign = TextAlign.Center,
+                            fontSize = 40.sp,
+                            color = Color(0xFFE1DDCD)
+                        )
+                    }
                 }
-
             }
         }
 
